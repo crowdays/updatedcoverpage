@@ -1,0 +1,106 @@
+<header>
+  <div class="container">
+    <nav>
+      <%= link_to root_path do %>
+  <%= image_tag "black_diamond.png", class: "navbar-brand-image", width: "35", height: "35" %>
+  
+      <% end %>
+
+      </a>
+      <ul>
+        <li class="dropdown">
+          <%= image_tag "black_diamond2.png", width: "35", height: "35", alt: "Toggle Dropdown", id: "dropdownMenu" %>
+          <ul>
+            <li><%= link_to "Home", root_path %></li>
+           <li><%= link_to "About", root_path(anchor: 'middle') %></li>
+
+           
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  header {
+    background-color: #dc3545;
+    color: #fff;
+    height: 80px;
+    line-height: 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 24px;
+    text-decoration: none;
+    color: #fff;
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  ul li {
+    margin: 0 10px;
+  }
+
+  ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+ul li.dropdown ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #dc3545;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  z-index: 9999;
+}
+
+ul li.dropdown:hover ul {
+  display: block;
+}
+
+ul li.dropdown ul li {
+  margin: 0;
+}
+
+ul li.dropdown ul li a {
+  color: #fff;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+}
+
+#dropdownMenu:hover ul {
+  display: block;
+}
+
+</style>
